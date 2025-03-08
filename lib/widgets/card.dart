@@ -25,10 +25,13 @@ class MyCard extends StatelessWidget {
             mainAxisSize: MainAxisSize.max,
             children: [
               Expanded(
-                child: Image.network(
-                  fit: BoxFit.cover,
-                  product.image,
-                  width: double.infinity,
+                child: Hero(
+                  tag: product.image,
+                  child: Image.network(
+                    fit: BoxFit.cover,
+                    product.image,
+                    width: double.infinity,
+                  ),
                 ),
               ),
               Padding(
@@ -69,39 +72,5 @@ class MyCard extends StatelessWidget {
         ),
       ),
     );
-
-    //
-    //             Expanded(
-    //               child: RatingStars(
-    //                 value: widget.product.rating.rate,
-    //                 onValueChanged: (v) {
-    //                   setState(() {
-    //                     v = widget.product.rating.rate;
-    //                   });
-    //                 },
-    //                 starBuilder: (index, color) => Icon(
-    //                   Icons.star,
-    //                   color: color,
-    //                 ),
-    //                 starCount: 5,
-    //                 starSize: 20,
-    //                 maxValue: 5,
-    //                 starSpacing: 2,
-    //                 maxValueVisibility: false,
-    //                 valueLabelVisibility: false,
-    //                 animationDuration: Duration(milliseconds: 1000),
-    //                 valueLabelPadding:
-    //                     const EdgeInsets.symmetric(vertical: 1, horizontal: 8),
-    //                 valueLabelMargin: const EdgeInsets.only(right: 8),
-    //                 starOffColor: const Color(0xffe7e8ea),
-    //                 starColor: Colors.yellow,
-    //               ),
-    //             )
-    //           ],
-    //         )
-    //       ],
-    //     ),
-    //   ),
-    // );
   }
 }

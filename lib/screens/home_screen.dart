@@ -87,11 +87,11 @@ class _HomeScreenState extends State<HomeScreen> {
                           child: Shimmer(
                             gradient: LinearGradient(
                               colors: [
-                                Colors.grey[300]!, // Light gray
-                                Colors.grey[100]!, // Almost white
-                                Colors.grey[300]!, // Light gray
+                                Colors.grey[300]!,
+                                Colors.grey[100]!,
+                                Colors.grey[300]!,
                               ],
-                              stops: const [0.4, 0.5, 0.6], // Smooth transition
+                              stops: const [0.4, 0.5, 0.6],
                               begin: Alignment.topLeft,
                               end: Alignment.bottomRight,
                             ),

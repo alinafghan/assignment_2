@@ -18,14 +18,14 @@ class _ProductScreenState extends State<ProductScreen> {
       appBar: AppBar(),
       body: SingleChildScrollView(
         child: Column(children: [
-          Image.network(
-            widget.product.image,
-            height: 400,
-            width: double.infinity,
-            fit: BoxFit.cover,
-          ),
-          SizedBox(
-            height: 20,
+          Hero(
+            tag: widget.product.image,
+            child: Image.network(
+              widget.product.image,
+              height: 400,
+              width: double.infinity,
+              fit: BoxFit.cover,
+            ),
           ),
           Padding(
             padding: const EdgeInsets.all(16.0),
@@ -62,7 +62,7 @@ class _ProductScreenState extends State<ProductScreen> {
                   ],
                 ),
                 SizedBox(
-                  height: 10,
+                  height: 20,
                 ),
                 Text(
                   widget.product.description,

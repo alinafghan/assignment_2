@@ -49,7 +49,7 @@ class _HomeScreenState extends State<HomeScreen> {
           )
         ],
       ),
-      body: !refProvider.isLoading
+      body: refProvider.isLoading
           ? Column(
               children: [
                 SizedBox(

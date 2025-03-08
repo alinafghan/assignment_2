@@ -16,22 +16,63 @@ class _ProductScreenState extends State<ProductScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: Column(children: [
-        Image.network(widget.product.image),
-        Text(
-          widget.product.title,
-          style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
-        ),
-        Text(
-          '\$${widget.product.price.toString()}',
-          style: TextStyle(color: Colors.green),
-        ),
-        RatingStars(),
-        Text(
-          widget.product.description,
-          textAlign: TextAlign.left,
-        ),
-      ]),
+      body: SingleChildScrollView(
+        child: Column(children: [
+          Image.network(
+            widget.product.image,
+            height: 400,
+            width: double.infinity,
+            fit: BoxFit.cover,
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  widget.product.title,
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Text(
+                  '\$${widget.product.price.toString()}',
+                  style: TextStyle(color: Colors.green, fontSize: 18),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Row(
+                  children: [
+                    RatingStars(
+                      valueLabelVisibility: false,
+                      value: widget.product.rating.rate,
+                      starColor: Colors.orangeAccent,
+                      starOffColor: Colors.blueGrey,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 6.0),
+                      child:
+                          Text('(${widget.product.rating.count.toString()})'),
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Text(
+                  widget.product.description,
+                  textAlign: TextAlign.left,
+                ),
+              ],
+            ),
+          ),
+        ]),
+      ),
     );
   }
 }

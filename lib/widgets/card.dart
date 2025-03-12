@@ -19,8 +19,9 @@ class MyCard extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Card(
-          elevation: 6,
+          elevation: 8,
           margin: EdgeInsets.all(2),
+          shadowColor: Colors.black,
           child: Column(
             mainAxisSize: MainAxisSize.max,
             children: [
@@ -29,8 +30,10 @@ class MyCard extends StatelessWidget {
                   tag: product.image,
                   child: Container(
                     clipBehavior: Clip.antiAlias,
-                    decoration:
-                        BoxDecoration(borderRadius: BorderRadius.circular(12)),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(12),
+                            topRight: Radius.circular(12))),
                     child: Image.network(
                       fit: BoxFit.cover,
                       product.image,

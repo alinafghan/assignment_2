@@ -52,7 +52,7 @@ class _ProductScreenState extends State<ProductScreen> {
                       valueLabelVisibility: false,
                       value: widget.product.rating.rate,
                       starColor: Colors.orangeAccent,
-                      starOffColor: Colors.blueGrey,
+                      starOffColor: const Color.fromARGB(255, 111, 116, 117),
                     ),
                     Padding(
                       padding: const EdgeInsets.only(left: 6.0),

@@ -65,11 +65,12 @@ class MyCard extends StatelessWidget {
                     ),
                   )),
                   Padding(
-                    padding: const EdgeInsets.all(6.0),
+                    padding: const EdgeInsets.only(
+                        top: 6.0, bottom: 6.0, left: 6.0, right: 10),
                     child: RatingStars(
                       starSize: 14,
                       starColor: Colors.orangeAccent,
-                      starOffColor: Colors.blueGrey,
+                      starOffColor: const Color.fromARGB(255, 111, 116, 117),
                       value: product.rating.rate,
                       valueLabelVisibility: false,
                     ),

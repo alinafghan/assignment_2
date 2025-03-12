@@ -27,10 +27,15 @@ class MyCard extends StatelessWidget {
               Expanded(
                 child: Hero(
                   tag: product.image,
-                  child: Image.network(
-                    fit: BoxFit.cover,
-                    product.image,
-                    width: double.infinity,
+                  child: Container(
+                    clipBehavior: Clip.antiAlias,
+                    decoration:
+                        BoxDecoration(borderRadius: BorderRadius.circular(12)),
+                    child: Image.network(
+                      fit: BoxFit.cover,
+                      product.image,
+                      width: double.infinity,
+                    ),
                   ),
                 ),
               ),
@@ -59,6 +64,7 @@ class MyCard extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.all(6.0),
                     child: RatingStars(
+                      starSize: 14,
                       starColor: Colors.orangeAccent,
                       starOffColor: Colors.blueGrey,
                       value: product.rating.rate,

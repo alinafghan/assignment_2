@@ -80,9 +80,9 @@ class _HomeScreenState extends State<HomeScreen> {
                               child: Shimmer(
                                 gradient: LinearGradient(
                                   colors: [
-                                    const Color.fromARGB(255, 218, 217, 217)!,
+                                    const Color.fromRGBO(167, 167, 167, 1)!,
                                     Colors.grey[100]!,
-                                    Colors.grey[300]!,
+                                    const Color.fromRGBO(167, 167, 167, 1)!,
                                   ],
                                   stops: const [0.4, 0.5, 0.6],
                                   begin: Alignment.topLeft,

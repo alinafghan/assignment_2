@@ -85,7 +85,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     const Color.fromRGBO(167, 167, 167, 1)!,
                                   ],
                                   stops: const [0.4, 0.5, 0.6],
-                                  begin: Alignment.topLeft,
+                                  begin: Alignment.centerLeft,
                                   end: Alignment.bottomRight,
                                 ),
                                 child: Container(
